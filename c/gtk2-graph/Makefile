@@ -7,7 +7,7 @@ CC = gcc
 #	-DGDK_PIXBUF_DISABLE_DEPRECATED \
 #	-DGTK_DISABLE_DEPRECATED
 
-CFLAGS = 
+CFLAGS = -lm
 	
 grapf: main.c 
 	$(CC) main.c -o grapf $(CFLAGS) `pkg-config gtk+-2.0 --cflags --libs`	
