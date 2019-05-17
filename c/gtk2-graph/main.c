@@ -1,9 +1,12 @@
+/* Выводит график f(x)
+*  
+*/
 #include <gtk/gtk.h>
 #include <math.h>
 #include <cairo.h>
 
-#define WIDTH   640
-#define HEIGHT  480
+#define WIDTH   1000
+#define HEIGHT  800
 
 #define ZOOM_X  100.0
 #define ZOOM_Y  100.0
@@ -11,7 +14,9 @@
 
 gfloat f (gfloat x)
 {
-    return 0.03 * pow (x, 3);
+    //return 0.03 * pow (x, 3);
+    /* ?? /usr/bin/ld: /tmp/ccZBRfU6.o: неопределённая ссылка на символ «pow@@GLIBC_2.0»  ?? */
+    return 0.3 * x * x * x;
 }
 
 static gboolean
